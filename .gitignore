@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for i in $*
+do
+    n=$i
+    fact=1
+    while [ $n -gt 1 ]
+    do
+        fact=$(($fact * $n))
+        ((n--))
+    done
+
+    echo "The factorial of $i is $fact"
+done
